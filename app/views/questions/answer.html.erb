@@ -1,0 +1,18 @@
+<div class="container">
+  <h1>Stupid Coaching</h1>
+  <div class="card">
+    <%= @answer %>
+  </div>
+
+  <div class="card">
+    <% if @answer.downcase == "i am going to work" %>
+        <p><%= "Great!" %></p>
+        <% elsif @answer.end_with?("?") %>
+          <p><%= "Silly quetsion, get dressed and go to work!" %></p>
+        <% else %>
+          <p><%= "I don't care, get dressed and got to work!" %></p>
+    <% end %>
+  </div>
+
+  <a href=""><%= link_to "Ask a new question", ask_path %></a>
+</div>
